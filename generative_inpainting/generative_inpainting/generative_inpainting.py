@@ -8,8 +8,8 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
 
-from .model.networks import Generator
-from .utils.tools import default_loader, get_model_list, normalize
+from model.networks import Generator
+from utils.tools import default_loader, get_model_list, normalize
 
 
 class GenerativeInpainter:
