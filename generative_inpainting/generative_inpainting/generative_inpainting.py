@@ -61,3 +61,8 @@ class GenerativeInpainter:
 
     def _write(self, output_path):
         vutils.save_image(self.inpainted_result, output_path, padding=0, normalize=True)
+
+    def __call__(self, image_path, mask_path, output_path):
+        self._read(image_path, mask_path)
+        self._proc()
+        self._write(output_path)
