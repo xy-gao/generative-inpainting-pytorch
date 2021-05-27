@@ -6,7 +6,8 @@ from torch.nn.utils import spectral_norm as spectral_norm_fn
 from torch.nn.utils import weight_norm as weight_norm_fn
 from torchvision import transforms
 from torchvision import utils as vutils
-from utils.tools import (
+
+from ..utils.tools import (
     default_loader,
     extract_image_patches,
     flow_to_image,
