@@ -30,7 +30,7 @@ class GenerativeInpainter:
         netG = Generator(netG_config, cuda, device_ids)
         # Resume weight
         last_model_name = get_model_list(checkpoint_path, "gen", iteration=iter)
-        netG.load_state_dict(torch.load(last_model_name))
+        netG.load_state_dict(torch.load(last_model_name, map_location="cpu"))
 
         if cuda:
             netG = nn.parallel.DataParallel(netG, device_ids=device_ids)
